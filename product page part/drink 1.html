@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>楊奇樂無比水果茶</title>
+    <link rel="stylesheet" href="../CSS/each_goods.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <nav>
+                <a href="../index.html"><img class="logo" src="../image/index/logo.png" width="150px" height="50px" name="top"></a>
+                <p class="search">搜尋欄</p>
+                <input type="text" name="search" size="15px" class="search">
+                <p class="index"><a href="../index.html" class="link">Home</a></p>
+                <p class="index"><a href="../about_us.html" class="link">關於我們</a></p>
+                <p class="index"><a href="../login.html" class="link">登入/註冊</a></p>
+                <p class="cart"><a href="../shopping.html" class="Link">購物車(3)</a></p>
+            </nav>
+        </div>
+        <div class="product-details">
+            <img src="../image/product image/drink 1.png" alt="楊奇樂無比水果茶">
+            <div class="product-info">
+                <h2>楊奇樂無比水果茶</h2>
+                <p>NT$55</p>
+                <p class="spe">楊桃、奇異果與芭樂的完美碰撞，結合茶香與水果的天然甜味，創造出一款既健康又充滿活力的飲品。這種獨特的混合帶來了多層次的口感和豐富的營養，令人一喝便愛不釋口</p>
+            </div>
+            <a href="../Product page.html"><button class="back-button">返回商品頁面</button></a>
+            
+            <div class="quantity-selector">
+                <h4>購買數量：</h4>
+                <input type="number" value="1" min="1">
+            </div>
+            <button class="add-to-cart">加入購物車</button>
+        </div>
+
+        <div class="reviews">
+            <h2>商品評論</h2>
+            <form>
+                <label for="rating">評分（1~5分）：</label><br>
+                <input type="number" id="rating" name="rating" min="1" max="5" required>
+                <br>
+                <label for="review">評論：</label><br>
+                <textarea id="review" name="review" rows="4" cols="50" required></textarea>
+                <br>
+                <input type="submit" value="提交評論">
+            </form>
+            <div id="reviews-list">
+                <h3>現有評論：</h3>
+                <ul>
+                    <li><strong>001 (5) - </strong>飲料入口好喝</li>
+                    <li><strong>002 (3) - </strong>員工態度不好</li>
+                    <li><strong>003 (4) - </strong>飲料還不錯</li>
+                    <li><strong>004 (5) - </strong>朋友介紹來喝，蠻不錯的</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+
+.login {
+    border: solid 1px #204A40;
+    padding: 20px;
+    width: 350px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 70px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    line-height: 220%;
+    position: relative;
+    margin: 50px auto;
+    color: #204A40;
+}
+
+.login h2 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.login-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.login-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 20%;
+    font-size: 14px;
+    color: #333;
+}
+
+.login-option img {
+    width: 24px;
+    height: 24px;
+    margin-top: -3%;
+}
+
+.login-option a {
+    color: #204A40;
+    text-decoration: none;
+}
+
+.login-option a:hover {
+    text-decoration: underline;
+}
+
+.su a {
+    color: #204A40;
+    text-decoration: none;
+}
+
+.su a:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    color: #c7c3bd;
+    border: 1px solid #204A40;
+    background-color: #204A40;
+    width: 320px;
+    height: 35px;
+    margin: 5%;
+    margin-bottom: 2%;
+    font-size: 14px;
+}
+

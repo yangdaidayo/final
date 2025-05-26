@@ -1,0 +1,158 @@
+
+.hero {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.hero-image {
+    max-width: 20%;
+    height: auto;
+}
+
+main {
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.shopping-cart {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.cart-item .item-image {
+    width: 80px;
+    height: 80px;
+    margin-right: 1rem;
+}
+
+.cart-item .item-details {
+    flex-grow: 1;
+}
+
+.cart-item .item-price {
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.order-summary, .payment-summary {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.payment-summary p {
+    margin: 0.5rem 0;
+}
+
+.payment-summary button {
+    margin: 0.5rem 0.5rem 0 0;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+.payment-summary button:last-child {
+    background-color: blue;
+}.hero {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.hero-image {
+    width: 80%;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #416F5D;
+}
+
+.shopping-cart, .order-summary, .payment-summary {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.item-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.item-price {
+    width: 80px;
+    text-align: right;
+    color: #416F5D;
+    font-weight: bold;
+}
+
+.order-summary input, .payment-summary input {
+    width: calc(100% - 120px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 48%;
+    padding: 10px;
+    margin: 10px 1%;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #638262;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #416F5D;
+}
+footer {
+    text-align: center;
+    background-color: lightgrey;
+}
+
+footer h4, footer p {
+    margin: 0.5rem 0;
+    color: #416F5D;
+}
+
+footer a {
+    color: #416F5D;
+}
+
+.media {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}

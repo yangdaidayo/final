@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>茶道-購物車</title>
+    <link rel="stylesheet" href="CSS/shopping.css">
+    <link rel="stylesheet" href="CSS/index_style.css">
+    <script type="text/javascript" src="JS/index_script.js"></script>
+    <script type="text/javascript" src="JS/shopping.js"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img class="logo" src="image/index/logo.png" width="150px" height="50px" name="top"></a>
+        <p class="search">搜尋欄</p>
+        <input type="text" name="search" size="15px" class="search">
+        <p class="index"><a href="Product page.html" class="link">商品頁面</a></p>
+        <p class="index"><a href="about_us.html" class="link">關於我們</a></p>
+        <p class="index"><a href="login.html" class="link">登入/註冊</a></p>
+        <p class="cart"><a href="shopping.html" class="Link">購物車(3)</a></p>
+    </header>
+    
+     
+        
+    <main>
+        <section class="hero">
+            <img src="image\index\Tea.jpg" alt="形象圖" class="hero-image">
+        </section>
+        <h1>茶道</h1>
+        <div class="shopping-cart">
+            <!-- Drink 1 -->
+            <div class="cart-item">
+                <img src="image/index/goods_1.png" alt="楊奇樂無比水果茶" class="item-image">
+                <div class="item-details">
+                    <h2>楊奇樂無比水果茶</h2>
+                    <p>NTD 55</p>
+                </div>
+                <input type="button" value="+" onclick="incrementQuantity('drink1', 55)">
+                <input type="text" id="drink1-quantity" value="0">
+                <input type="button" value="-" onclick="decrementQuantity('drink1', 55)">
+            </div>
+
+            <!-- Drink 2 -->
+            <div class="cart-item">
+                <img src="image/index/goods_2.png" alt="橙風破浪" class="item-image">
+                <div class="item-details">
+                    <h2>橙風破浪</h2>
+                    <p>NTD 50</p>
+                </div>
+                <input type="button" value="+" onclick="incrementQuantity('drink2', 50)">
+                <input type="text" id="drink2-quantity" value="0">
+                <input type="button" value="-" onclick="decrementQuantity('drink2', 50)">
+            </div>
+
+            <!-- Drink 3 -->
+            <div class="cart-item">
+                <img src="image/index/goods_3.png" alt="覆果好檸" class="item-image">
+                <div class="item-details">
+                    <h2>覆果好檸</h2>
+                    <p>NTD 65</p>
+                </div>
+                <input type="button" value="+" onclick="incrementQuantity('drink3', 65)">
+                <input type="text" id="drink3-quantity" value="0">
+                <input type="button" value="-" onclick="decrementQuantity('drink3', 65)">
+            </div>
+
+            <!-- Drink 4 -->
+            <div class="cart-item">
+                <img src="image/index/goods_4.png" alt="琥珀之輝" class="item-image">
+                <div class="item-details">
+                    <h2>琥珀之輝</h2>
+                    <p>NTD 40</p>
+                </div>
+                <input type="button" value="+" onclick="incrementQuantity('drink4', 40)">
+                <input type="text" id="drink4-quantity" value="0">
+                <input type="button" value="-" onclick="decrementQuantity('drink4', 40)">
+            </div>
+
+            <!-- Drink 5 -->
+            <div class="cart-item">
+                <img src="image/index/goods_5.png" alt="午後時光" class="item-image">
+                <div class="item-details">
+                    <h2>午後時光</h2>
+                    <p>NTD 45</p>
+                </div>
+                <input type="button" value="+" onclick="incrementQuantity('drink5', 45)">
+                <input type="text" id="drink5-quantity" value="0">
+                <input type="button" value="-" onclick="decrementQuantity('drink5', 45)">
+            </div>
+
+            <!-- Drink 6 -->
+            <div class="cart-item">
+                <img src="image/index/goods_6.png" alt="1984"class="item-image">
+                <div class="item-details">
+                    <h2>1984</h2>
+                    <p>NTD 55</p>
+                </div>
+                <input type="button" value="+" onclick="incrementQuantity('drink6', 55)">
+                <input type="text" id="drink6-quantity" value="0">
+                <input type="button" value="-" onclick="decrementQuantity('drink6', 55)">
+            </div>
+
+            <!-- Drink 7 -->
+            <div class="cart-item">
+                <img src="image/index/goods_7.png" alt="薄荷檸檬冰茶"class="item-image">
+                <div class="item-details">
+                    <h2>薄荷檸檬冰茶</h2>
+                    <p>NTD 45</p>
+                </div>
+                <input type="button" value="+" onclick="incrementQuantity('drink7', 45)">
+                <input type="text" id="drink7-quantity" value="0">
+                <input type="button" value="-" onclick="decrementQuantity('drink7', 45)">
+            </div>
+
+            <!-- Drink 8 -->
+            <div class="cart-item">
+                <img src="image/index/goods_8.png"alt="蜜桃烏龍茶" class="item-image">
+                <div class="item-details">
+                    <h2>蜜桃烏龍茶</h2>
+                    <p>NTD 35</p>
+                </div>
+                <input type="button" value="+" onclick="incrementQuantity('drink8', 35)">
+                <input type="text" id="drink8-quantity" value="0">
+                <input type="button" value="-" onclick="decrementQuantity('drink8', 35)">
+            </div>
+
+            <!-- Drink 9 -->
+            <div class="cart-item">
+                <img src="image\index\goods_9.png" alt="柚香綠茶" class="item-image">
+                <div class="item-details">
+                    <h2>柚香綠茶</h2>
+                    <p>NTD 30</p>
+                </div>
+                <input type="button" value="+" onclick="incrementQuantity('drink9', 35)">
+                <input type="text" id="drink9-quantity" value="0">
+                <input type="button" value="-" onclick="decrementQuantity('drink9', 35)">
+            </div>
+        </div>
+
+        <div class="order-summary">
+            <h3>預訂資料填寫</h3>
+            <p>姓名：<input type="text" name="name"></p>
+            <p>電話：<input type="text" name="phone"></p>
+            <p>拿取日期：<input type="date" name="date"></p>
+            <p>拿取時間：<input type="time" name="time"></p>
+            <p>付款方式：<input type="text" name="payment"></p>
+        </div>
+
+        <div class="payment-summary">
+            <h3>付款金額</h3>
+            <p id="subtotal">小計: NTD 0</p>
+            <p id="shippingFee">運費: NTD 0</p>
+            <p id="total">總計: NTD 0</p>
+            <button type="button">繼續購買</button>
+            <button type="button">確認訂單</button>
+        </div>
+
+    </main>
+    
+    <footer>
+        <h4>聯絡資訊:</h4>
+        <p>電話:0912-345-678 電子信箱:<a href="mailto:Chadao@gmail.com" target="_blank">Chadao@gmail.com</a></p>
+        <h4>追蹤我們:</h4>
+        <p>
+            <a href="https://www.facebook.com/CYCU.PR/?locale=zh_TW" target="_blank"><img src="image/index/fb.png" class="media"></a>
+            <a href="https://twitter.com/X" target="_blank"><img src="image/index/x.jpg" class="media"></a>
+            <a href="https://www.instagram.com/cycu_tw/" target="_blank"><img src="image/index/ig.png" class="media"></a>
+        </p>
+        © 2024 茶道 版權所有
+    </footer>
+</body>
+</html>

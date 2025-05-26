@@ -1,0 +1,39 @@
+.loginup {
+    border: solid 1px #204A40;
+    padding: 10px; 
+    width: 350px; 
+    height: 380px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 70px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    line-height: 220%; 
+    position: relative;
+    margin: auto; 
+    top: 10px; 
+    color: #204A40;
+}
+
+.loginup h2 {
+    font-family:'Times New Roman', Times, serif;
+}
+
+.loi a {
+    color: #204a4060;
+    text-decoration: none;
+}
+
+.loi a:hover {
+    color:#204A40;
+}
+
+.sb input[type="submit"] {
+    color: #c7c3bd;
+    border: 1px solid #204A40;
+    background-color: #204A40;
+    width: 320px;
+    height: 35px;
+    margin: 5%;
+    margin-bottom: 2%;
+    font-size: 14px; 
+}

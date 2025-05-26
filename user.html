@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員資料</title>
+    <link rel="stylesheet" href="CSS/index_style.css">
+    <link rel="stylesheet" href="CSS/user.css">
+    <script type="text/javascript" src="JS/index_script.js"></script>
+    <script type="text/javascript" src="JS/user.js"></script>
+    
+</head>
+<body>
+    <header>
+        <a href="index.html"><img class="logo" src="image/index/logo.png" width="150px" height="50px" name="top"></a>
+        <p class="search">搜尋欄</p>
+        <input type="text" name="search" size="15px" class="search">
+        <p class="index"><a href="Product page.html" class="link">商品頁面</a></p>
+        <p class="index"><a href="about_us.html" class="link">關於我們</a></p> 
+        <p class="index"><a href="login.html" class="link">登入/註冊</a></p> 
+        <p class="cart"><a href="shopping.html" class="Link">購物車(3)</a></p>
+    </header>
+
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('member-info')">會員資料</button>
+            <button class="tab" onclick="showTab('order-status')">訂單狀況</button>
+            <button class="tab" onclick="showTab('purchase-history')">購買紀錄</button>
+        </div>
+        <div id="member-info" class="tab-content active">
+            <p><strong>姓名：</strong>林三歲</p>
+            <p><strong>電話：</strong>0918-998-123</p>
+            <p><strong>生日：</strong>2002/01/1</p>
+            <p><strong>E-mail：</strong>linyouzi@gmail.com</p>
+            <p><strong>密碼：</strong>ming0511</p>
+            <p><strong>地址：</strong>320桃園市中壢區中北路200號</p>
+            <button class="edit-button">修改資料</button>
+        </div>
+        <div id="order-status" class="tab-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="5" class="align-left">
+                            訂單編號：B87514520<br>
+                            訂購日期：2024/5/10
+                        </th>
+                    </tr>
+                    <tr class="align-center">
+                        <th></th>
+                        <th>品項</th>
+                        <th>價格</th>
+                        <th>個數</th>
+                        <th>狀態</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><img src="image\product image\drink 1.png" alt="楊奇樂無比水果茶"><br>楊奇樂無比水果茶</td>
+                        <td>NT$55</td>
+                        <td>1</td>
+                        <td rowspan="2">已到達</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><img src="image\product image\drink 5.png" alt="蜜桃烏龍茶"><br>蜜桃烏龍茶</td>
+                        <td>NT$35</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><img src="image\product image\drink 8.png" alt="午後時光"><br>午後時光</td>
+                        <td>NT$45</td>
+                        <td>1</td>
+                    </tr>
+                    <tr class="summary">
+                        <td colspan="4" class="align-right"> 
+                            總數量：3 <br>
+                            總金額：NT$135
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div id="purchase-history" class="tab-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="5" class="align-left">
+                            訂單編號：B87514520<br>
+                            訂購日期：2024/3/15
+                        </th>
+                    </tr>
+                    <tr class="align-center">
+                        <th></th>
+                        <th>品項</th>
+                        <th>價格</th>
+                        <th>個數</th>
+                        <th>商品評價</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><img src="image\product image\drink 5.png" alt="蜜桃烏龍茶"><br>蜜桃烏龍茶</td>
+                        <td>NT$35</td>
+                        <td>1</td>
+                        <td>便宜！超甜，可以點無糖~~</td>
+                    </tr>
+                    <tr class="summary">
+                        <td colspan="4" class="align-right"> 
+                            總數量：1 <br>
+                            總金額：NT$35
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    
+</body>
+</html>
