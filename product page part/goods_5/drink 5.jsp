@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>楊奇樂無比水果茶</title>
+    <title>蜜桃烏龍茶</title>
     <link rel="stylesheet" href="../../CSS/each_goods.css">
 </head>
 <body>
@@ -23,11 +23,11 @@
             </nav>
         </div>
         <div class="product-details">
-            <img src="../../image/product image/drink 1.png" alt="楊奇樂無比水果茶">
+            <img src="../../image/product image/drink 5.png" alt="蜜桃烏龍茶">
             <div class="product-info">
-                <h2>楊奇樂無比水果茶</h2>
-                <p>NT$55</p>
-                <p class="spe">楊桃、奇異果與芭樂的完美碰撞，結合茶香與水果的天然甜味，創造出一款既健康又充滿活力的飲品。這種獨特的混合帶來了多層次的口感和豐富的營養，令人一喝便愛不釋口</p>
+                <h2>蜜桃烏龍茶</h2>
+                <p>NT$35</p>
+                <p class="spe">蜜桃烏龍茶是夏日午後的甜美驚喜。每一口蜜桃烏龍茶都像是走進了一片蜜桃果園，微風中彌漫著果香和茶韻，讓你不禁心生愉悅，感受大自然的甜美</p>
             </div>
             <a href="../../Product page.html"><button class="back-button">返回商品頁面</button></a>
             
@@ -53,22 +53,19 @@
                     sql="USE `board`";
                     con.createStatement().execute(sql);
             %>
-            <form name="form1" method="get" action="add.jsp">
+            <form name="form5" method="get" action="add.jsp">
                 <label for="rating">評分（1~5分）：</label><br>
                 <input type="number" id="rating" name="rating" min="1" max="5" required>
                 <br>
                 <label for="review">評論：</label><br>
                 <textarea id="review" name="review" rows="4" cols="50" required></textarea>
                 <br>
-                <input type="submit" name="submit" value="提交評論">
-                <input type="Reset" name="reset" value="重新填寫">
+                <input type="submit" value="提交評論">
             </form>
-            
-            
             <div id="reviews-list">
                 <h3>現有評論：</h3>
                 <%
-                    sql="SELECT COUNT(*) FROM `goods_1`";
+                    sql="SELECT COUNT(*) FROM `goods_5`";
                     ResultSet rs=con.createStatement().executeQuery(sql);
 
                     rs.next();
@@ -85,7 +82,7 @@
 
                     int start_record=(current_page-1)*5;
 
-                    sql="SELECT * FROM `goods_1` ORDER BY `GBNO` DESC LIMIT ";
+                    sql="SELECT * FROM `goods_5` ORDER BY `GBNO` DESC LIMIT ";
                     sql+=start_record+",5";
 
                     rs=con.createStatement().executeQuery(sql);
@@ -101,7 +98,7 @@
                     int page_num=(int)Math.ceil((double)total_content/5.0);
                     out.println("請選擇頁數");
                     for(int i=1;i<=page_num;i++)
-                        out.print("<a href='drink 1.jsp?page="+i+"'>"+i+"</a>&nbsp;");
+                        out.print("<a href='drink 5.jsp?page="+i+"'>"+i+"</a>&nbsp;");
                     out.println("<p>");
                     con.close();
                 }
