@@ -1,3 +1,5 @@
+<%@ page import = "java.sql.*, java.util.*"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +10,7 @@
 </head>
 <body>
     <header>
-        <a href="index.html"><img class="logo" src="image/index/logo.png" width="150px" height="50px" name="top"></a> <!--圖片需替換-->
+        <a href="index.jsp"><img class="logo" src="image/index/logo.png" width="150px" height="50px" name="top"></a> <!--圖片需替換-->
         <p class="search">搜尋欄</p>
         <input type="text" name="search" size="15px" class="search">
         <p class="index"><a href="Product page.html" class="link">商品頁面</a></p>
@@ -19,9 +21,9 @@
 
     <nav>
         <div class="image-container">
-            <img src="image/index/introduction_1.png" class="control">
-            <img src="image/index/introduction_2.png" class="control">
-            <img src="image/index/introduction_3.png" class="control">
+            <a href="product page part/goods_9/drink 9.jsp"><img src="image/index/introduction_1.png" class="control"></a>
+            <a href="product page part/goods_2/drink 2.jsp"><img src="image/index/introduction_2.png" class="control"></a>
+            <a href="product page part/goods_4/drink 4.jsp"><img src="image/index/introduction_3.png" class="control"></a>
         </div>
         
         <script src="JS/index_script.js"></script>
@@ -107,7 +109,44 @@
             </a>
         </div>  
     </main>
+    <%
+    try {
+        Class.forName("com.mysql.jdbc.Driver");
+        try {
+            String url="jdbc:mysql://localhost/?serverTimezone=UTC";
+            Connection con=DriverManager.getConnection(url,"root","1234");
+            if(con.isClosed())
+            out.println("連線建立失敗");
+            else
+            {        
+            String sql="USE `ad`";
+            ResultSet rs;
+            con.createStatement().execute(sql);
+            Random ran=new Random();
+            int current_adid=ran.nextInt(5)+1;
 
+            sql="SELECT * FROM `ads` WHERE `adid`= " + current_adid;
+            rs=con.createStatement().executeQuery(sql);
+
+            while (rs.next())
+            {
+             out.println("<a href='https://"+rs.getString(4)+"' target = '_blank'>");
+             out.println("<img src='"+rs.getString(2)+"/"+rs.getString(3)+"'");
+             out.println(" alt='"+rs.getString(5)+"' width = '20%' height = '20%'></a><br>");
+           }
+        }
+
+            con.close();
+        }
+        catch (SQLException sExec) {
+            out.println("SQL錯誤"+sExec.toString());
+        }
+    }
+    catch (ClassNotFoundException err) {
+    out.println("class錯誤"+err.toString());
+    }
+    %>
+    
     <footer>
         <h4>聯絡資訊:</h4>
         <p>電話:0912-345-678 電子信箱:<a href="mailto:Chadao@gmail.com" target="_blank">Chadao@gmail.com</a></p>
