@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `ad` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `ad`;
 -- MySQL dump 10.13  Distrib 8.0.41, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: ad
@@ -32,16 +34,6 @@ CREATE TABLE `ads` (
   PRIMARY KEY (`ADID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `ads`
---
-
-LOCK TABLES `ads` WRITE;
-/*!40000 ALTER TABLE `ads` DISABLE KEYS */;
-INSERT INTO `ads` VALUES (1,'image/ad','airplan.gif','www.taoyuan-airport.com/','airplane','airplane'),(2,'image/ad','1984.gif','reurl.cc/vQbW7o','1984','1984'),(3,'image/ad','coffee.gif','www.starbucks.com.tw','coffee','coffee'),(4,'image/ad','wood.gif','www.ikea.com.tw','wood','wood'),(5,'image/ad','sea.gif','www.ktnp.gov.tw','sea','sea');
-/*!40000 ALTER TABLE `ads` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -52,4 +44,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-05-30  2:00:55
+-- Dump completed on 2025-05-31 22:02:08

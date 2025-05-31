@@ -1,22 +1,40 @@
+<%@ page import = "java.sql.*, java.util.*"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" session="true" %>
+<%
+    String userId = (String) session.getAttribute("userId");
+    Boolean isLoggedIn = (Boolean) session.getAttribute("login");
+    if (isLoggedIn == null) isLoggedIn = false;
+%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>茶道-商品頁面</title>
+    <title>茶道</title>
+    <link rel="stylesheet" href="CSS/index_style.css">
     <link rel="stylesheet" href="CSS/goods.css">
+    <script>
+        function showAlertIfNotLoggedIn() {
+            alert("請先登入才能加入購物車。");
+        }
+    </script>
 </head>
 <body>
     <header>
-        <a href="index.jsp"><img class="logo" src="image/index/logo.png" width="150px" height="50px" name="top"></a>
+        <a href="index.jsp"><img class="logo" src="image/index/logo.png" width="150" height="50" alt="茶道 Logo"></a>
         <p class="search">搜尋欄</p>
-        <input type="text" name="search" size="15px" class="search">
+        <input type="text" name="search" size="15" class="search">
         <p class="index"><a href="index.jsp" class="link">Home</a></p>
         <p class="index"><a href="about_us.jsp" class="link">關於我們</a></p>
-        <p class="index"><a href="login.html" class="link">登入/註冊</a></p>
-        <p class="cart"><a href="shopping.html" class="Link">購物車</a></p>
+        <% if (isLoggedIn) { %>
+            <p class="index"><a href="user.jsp" class="link"><%= userId %> 會員中心</a></p>
+            <p class="index"><a href="logout.jsp" class="link">登出</a></p>
+        <% } else { %>
+            <p class="index"><a href="login.html" class="link">登入/註冊</a></p>
+        <% } %>
+        <p class="cart"><a href="shopping.html" class="link">購物車</a></p>
     </header>
+
 
     <main>
         <section class="product-category">
@@ -124,3 +142,5 @@
     </main>
 </body>
 </html>
+
+

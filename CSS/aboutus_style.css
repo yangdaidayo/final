@@ -82,3 +82,62 @@ body {
     color: white;
     border-radius: 20%;
 }
+
+section::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: 40px auto;
+    max-width: 960px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.pic {
+    width: 240px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 20px 20px 0;
+    flex-shrink: 0;
+}
+
+.text {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    background-color: lightgrey;
+    border: 3px dotted gray;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.text h3 {
+    margin-top: 0;
+    color: #4e7938;
+}
+
+/* 手機自動換上下 */
+@media (max-width: 768px) {
+    section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pic {
+        margin: 0 auto 20px;
+    }
+
+    .text {
+        width: 90%;
+        text-align: left;
+    }
+}
+

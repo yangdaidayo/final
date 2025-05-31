@@ -1,5 +1,10 @@
 <%@ page import = "java.sql.*, java.util.*"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" session="true" %>
+<%
+    String userId = (String) session.getAttribute("userId");
+    Boolean isLoggedIn = (Boolean) session.getAttribute("login");
+    if (isLoggedIn == null) isLoggedIn = false;
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,14 +15,19 @@
 </head>
 <body>
     <header>
-        <a href="index.jsp"><img class="logo" src="image/index/logo.png" width="150px" height="50px" name="top"></a> <!--圖片需替換-->
+        <a href="index.jsp"><img class="logo" src="image/index/logo.png" width="150px" height="50px" name="top"></a>
         <p class="search">搜尋欄</p>
         <input type="text" name="search" size="15px" class="search">
-        <p class="index"><a href="Product page.html" class="link">商品頁面</a></p>
-        <p class="index"><a href="about_us.html" class="link">關於我們</a></p> 
-        <p class="index"><a href="login.html" class="link">登入/註冊</a></p> 
+        <p class="index"><a href="product_page.jsp" class="link">商品頁面</a></p>
+        <p class="index"><a href="about_us.jsp" class="link">關於我們</a></p>
+        <% if (isLoggedIn) { %>
+            <p class="index"><a href="user.jsp" class="link"><%= userId %> 會員中心</a></p>
+            <p class="index"><a href="logout.jsp" class="link">登出</a></p>
+        <% } else { %>
+            <p class="index"><a href="login.html" class="link">登入/註冊</a></p> 
+        <% } %>
         <p class="cart"><a href="shopping.html" class="Link">購物車</a></p>
-    </header> 
+    </header>
 
     <nav>
         <div class="image-container">
@@ -25,10 +35,9 @@
             <a href="product page part/goods_2/drink 2.jsp"><img src="image/index/introduction_2.png" class="control"></a>
             <a href="product page part/goods_4/drink 4.jsp"><img src="image/index/introduction_3.png" class="control"></a>
         </div>
-        
         <script src="JS/index_script.js"></script>
     </nav>
-        
+    
     <main>
         <h3>限時特賣</h3>
         <div class="item">

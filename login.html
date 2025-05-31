@@ -3,74 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>茶道-LOG IN</title>
+    <title>茶道 - LOG IN</title>
     <link rel="stylesheet" href="CSS/index_style.css">
     <link rel="stylesheet" href="CSS/login.css">
     <script type="text/javascript" src="JS/index_script.js"></script>
-
     <script>
         function toggleSearch() {
             var searchBar = document.getElementById("searchBar");
-            if (searchBar.style.display === "none") {
-                searchBar.style.display = "flex";
-            } else {
-                searchBar.style.display = "none";
-            }
+            searchBar.style.display = (searchBar.style.display === "none") ? "flex" : "none";
         }
     </script>
 </head>
 <body>
     <header>
-        <a href="index.jsp"><img class="logo" src="image/index/logo.png" width="150px" height="50px" name="top"></a>
+        <a href="index.jsp"><img class="logo" src="image/index/logo.png" width="150" height="50" alt="茶道 Logo"></a>
         <p class="search">搜尋欄</p>
-        <input type="text" name="search" size="15px" class="search">
-        <p class="index"><a href="Product page.html" class="link">商品頁面</a></p>
-        <p class="index"><a href="about_us.html" class="link">關於我們</a></p> 
+        <input type="text" name="search" size="15" class="search">
+        <p class="index"><a href="product_page.jsp" class="link">商品頁面</a></p>
+        <p class="index"><a href="about_us.jsp" class="link">關於我們</a></p> 
         <p class="index"><a href="login.html" class="link">登入/註冊</a></p> 
-        <p class="cart"><a href="shopping.html" class="Link">購物車</a></p>
+        <p class="cart"><a href="shopping.html" class="link">購物車</a></p>
     </header>
 
     <main>
-        <!-- 登入 -->
         <div class="login">
             <h2>Log In</h2>
-            <form method="post" action="user.html">
-                <label for="email">帳號：</label>
-                <input type="email" id="email" name="userID" placeholder="E-mail" required><br>
-                <label for="password">密碼：</label>
-                <input type="password" id="password" name="Password" placeholder="6~8位密碼(包括英文大小寫、數字) " required><br>
-                <h4>---------------------或---------------------</h4>
-                <div class="login-options">
-                    <div class="login-option">
-                        <img src="image/index/gmail3.png" alt="Google">
-                        <a href="https://contacts.google.com" target="_blank">使用 Google 登入</a>
-                    </div>
-                    <div class="login-option">
-                        <img src="image/index/line.jpg" alt="Line">
-                        <a href="https://access.line.me/oauth2/v2.1/login?returnUri=%2Foauth2%2Fv2.1%2Fauthorize%2Fconsent&loginChannelId=1521958360&loginState=8MJGVVgXBfuIKOLqCogULW#/" target="_blank">使用 Line 登入</a>
-                    </div>
-                    <div class="login-option">
-                        <img src="image/index/apple1.png" alt="Apple">
-                        <a href="https://appleid.apple.com/sign-in" target="_blank">使用 AppleID 登入</a>
-                    </div>
-                </div>
+            <form method="post" action="check.jsp">
+                <label for="id">帳號：</label>
+                <input type="text" id="id" name="id" placeholder="E-mail" required><br>
+
+                <label for="pwd">密碼：</label>
+                <input type="password" id="pwd" name="pwd" placeholder="6~8位密碼(包括英文大小寫、數字)" required><br>
+
                 <input type="submit" value="登入" class="login-btn">
                 <div class="su"><a href="login_up.html"><h5>註冊帳號</h5></a></div>
-                <div class="su"><a href="user.html"><h5>會員資料</h5></a></div>
+                <!-- 可選功能 -->
+                <!-- <div class="su"><a href="forgot_pwd.html"><h5>忘記密碼？</h5></a></div> -->
             </form>
         </div>
     </main>
 
     <footer>
         <h4>聯絡資訊:</h4>
-        <p>電話:0912-345-678 電子信箱:<a href="mailto:Chadao@gmail.com" target="_blank">Chadao@gmail.com</a></p>
+        <p>電話: 0912-345-678　電子信箱: <a href="mailto:Chadao@gmail.com" target="_blank">Chadao@gmail.com</a></p>
         <h4>追蹤我們:</h4>
         <p>
-            <a href="https://www.facebook.com/CYCU.PR/?locale=zh_TW" target="_blank"><img src="image/index/fb.png" class="media"></a>
-            <a href="https://twitter.com/X" target="_blank"><img src="image/index/x.jpg" class="media"></a>
-            <a href="https://www.instagram.com/cycu_tw/" target="_blank"><img src="image/index/ig.png" class="media"></a>
+            <a href="https://www.facebook.com/CYCU.PR/?locale=zh_TW" target="_blank"><img src="image/index/fb.png" class="media" alt="FB"></a>
+            <a href="https://twitter.com/X" target="_blank"><img src="image/index/x.jpg" class="media" alt="X"></a>
+            <a href="https://www.instagram.com/cycu_tw/" target="_blank"><img src="image/index/ig.png" class="media" alt="IG"></a>
         </p>
-        © 2024 茶道 版權所有
+        <p>© 2025 茶道 版權所有</p>
     </footer>
 </body>
 </html>

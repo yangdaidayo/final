@@ -1,23 +1,34 @@
+<%@ page contentType="text/html; charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" language="java" %>
+<%
+    String userId = (String) session.getAttribute("userId");
+    Boolean isLoggedIn = (Boolean) session.getAttribute("login");
+    if (isLoggedIn == null) isLoggedIn = false;
+%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>茶道-關於我們</title>
+    <title>茶道 - 關於我們</title>
     <link rel="stylesheet" href="CSS/aboutus_style.css">
 </head>
 <body>
     <header>
-        <a href="index.jsp"><img class="logo" src="image/index/logo.png" width="150px" height="50px" name="top"></a> <!--圖片需替換-->
+        <a href="index.jsp"><img class="logo" src="image/index/logo.png" width="150" height="50" alt="茶道 Logo"></a>
         <p class="search">搜尋欄</p>
-        <input type="text" name="search" size="15px" class="search">
-        <p class="index"><a href="index.jsp" class="link">關於我們</a></p>
-        <p class="index"><a href="Product page.html" class="link">商品頁面</a></p>
-        <p class="index"><a href="login.html" class="link">登入/註冊</a></p>
-        <p class="cart"><a href="shopping.html" class="Link">購物車</a></p>
+        <input type="text" name="search" size="15" class="search">
+        <p class="index"><a href="index.jsp" class="link">Home</a></p>
+        <p class="index"><a href="product_page.jsp" class="link">商品頁面</a></p>
+        <% if (isLoggedIn) { %>
+            <p class="index"><a href="user.jsp" class="link"><%= userId %> 會員中心</a></p>
+            <p class="index"><a href="logout.jsp" class="link">登出</a></p>
+        <% } else { %>
+            <p class="index"><a href="login.html" class="link">登入/註冊</a></p>
+        <% } %>
+        <p class="cart"><a href="shopping.html" class="link">購物車</a></p>
     </header>
 
-    <main>
+     <main>
         <section>
             <img src="image/Tea.jpg" class="pic">
             <p class="text">
