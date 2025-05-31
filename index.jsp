@@ -1,5 +1,6 @@
 <%@ page import = "java.sql.*, java.util.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" session="true" %>
+<%@ page pageEncoding="UTF-8"%>
 <%
     String userId = (String) session.getAttribute("userId");
     Boolean isLoggedIn = (Boolean) session.getAttribute("login");
@@ -37,7 +38,56 @@
         </div>
         <script src="JS/index_script.js"></script>
     </nav>
-    
+
+    <%
+        // 檢查 Session 中是否已有標記，避免重整頁面時再次計數
+        if (session.getAttribute("counted") == null) {
+            session.setAttribute("counted", true); // 設定 Session 記錄
+
+            try {
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                String url = "jdbc:mysql://localhost:3306/counter?serverTimezone=UTC";
+                Connection con = DriverManager.getConnection(url, "root", "1234");
+
+                if (con.isClosed()) {
+                    out.println("連線建立失敗");
+                } else {
+                    // 讀取目前訪客數
+                    String selectSQL = "SELECT NO FROM count";
+                    Statement stmt = con.createStatement();
+                    ResultSet rs = stmt.executeQuery(selectSQL);
+
+                    int visitorCount = 0;
+                    if (rs.next()) {
+                        visitorCount = rs.getInt("NO");
+                    }
+
+                    visitorCount++; // 加 1
+
+                    // 更新訪客數
+                    String updateSQL = "UPDATE count SET NO = ?";
+                    PreparedStatement pstmt = con.prepareStatement(updateSQL);
+                    pstmt.setInt(1, visitorCount);
+                    pstmt.executeUpdate();
+
+                    out.println("<h2>您好！您是第 " + visitorCount + " 位貴客！</h2>");
+
+                    rs.close();
+                    stmt.close();
+                    pstmt.close();
+                    con.close();
+                }
+            } catch (ClassNotFoundException e) {
+                out.println("Class 錯誤：" + e.toString());
+            } catch (SQLException e) {
+                out.println("SQL 錯誤：" + e.toString());
+            }
+        } else {
+            out.println("<h2>歡迎回來！想再購買什麼呢?</h2>");
+        }
+    %>
+
+
     <main>
         <h3>限時特賣</h3>
         <div class="item">
