@@ -1,18 +1,11 @@
+<%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>茶道 - LOG IN</title>
+    <title>茶道 - 忘記密碼</title>
     <link rel="stylesheet" href="CSS/index_style.css">
     <link rel="stylesheet" href="CSS/login.css">
-    <script type="text/javascript" src="JS/index_script.js"></script>
-    <script>
-        function toggleSearch() {
-            var searchBar = document.getElementById("searchBar");
-            searchBar.style.display = (searchBar.style.display === "none") ? "flex" : "none";
-        }
-    </script>
 </head>
 <body>
     <header>
@@ -27,19 +20,13 @@
 
     <main>
         <div class="login">
-            <h2>Log In</h2>
-            <form method="post" action="check.jsp">
-                <label for="id">帳號：</label>
-                <input type="text" id="id" name="id" placeholder="E-mail" required><br>
+            <h2>忘記密碼</h2>
+            <form method="post" action="reset_password.jsp">
+                <label for="identifier">請輸入註冊帳號或 Email：</label>
+                <input type="text" id="identifier" name="identifier" placeholder="帳號或 Email" required><br>
 
-                <label for="pwd">密碼：</label>
-                <input type="password" id="pwd" name="pwd" placeholder="6~8位密碼(包括英文大小寫、數字)" required><br>
-
-                <input type="submit" value="登入" class="login-btn">
-                <div class="su"><a href="login_up.html"><h5>註冊帳號</h5></a></div>
-                <div class="su">
-				<a href="forgot_pwd.jsp"><h5>忘記密碼？</h5></a>
-				</div> 
+                <input type="submit" value="送出" class="login-btn">
+                <div class="su"><a href="login.html"><h5>返回登入頁</h5></a></div>
             </form>
         </div>
     </main>
