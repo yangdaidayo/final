@@ -3,14 +3,13 @@ function showTab(tabId) {
     const tabContents = document.querySelectorAll('.tab-content');
 
     tabs.forEach(tab => {
-        if (tab.dataset.tab === tabId) {
-            tab.classList.add('active');
-        } else {
-            tab.classList.remove('active');
-        }
+        tab.classList.remove('active');
     });
 
     tabContents.forEach(content => {
-        content.classList.toggle('active', content.id === tabId);
+        content.classList.remove('active');
     });
+
+    document.querySelector(`.tab[onclick="showTab('${tabId}')"]`).classList.add('active');
+    document.getElementById(tabId).classList.add('active');
 }

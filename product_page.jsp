@@ -31,7 +31,7 @@
         <% } else { %>
             <p class="index"><a href="login.html" class="link">登入/註冊</a></p>
         <% } %>
-        <p class="cart"><a href="shopping.html" class="Link">購物車</a></p>
+        <p class="cart"><a href="shopping.jsp" class="Link">購物車</a></p>
     </header>
 
 

@@ -1,15 +1,22 @@
-function incrementQuantity(item) {
-    var quantityElement = document.getElementById(item + '-quantity');
-    var quantity = parseInt(quantityElement.value);
+// 用物件存每個商品的價錢
+const prices = {}; // key: 商品id, value: 商品價格
+
+// 初始化價格物件（可透過 JSP 產生）
+function setPrice(id, price) {
+    prices[id] = price;
+}
+
+function incrementQuantity(itemId) {
+    const quantityElement = document.getElementById(itemId + '-quantity');
+    let quantity = parseInt(quantityElement.value);
     quantity++;
     quantityElement.value = quantity;
     updateTotalPrice();
 }
 
-
-function decrementQuantity(item) {
-    var quantityElement = document.getElementById(item + '-quantity');
-    var quantity = parseInt(quantityElement.value);
+function decrementQuantity(itemId) {
+    const quantityElement = document.getElementById(itemId + '-quantity');
+    let quantity = parseInt(quantityElement.value);
     if (quantity > 0) {
         quantity--;
         quantityElement.value = quantity;
@@ -17,17 +24,14 @@ function decrementQuantity(item) {
     }
 }
 
-
 function updateTotalPrice() {
-    var greenTeaPrice = 45; // 柚香綠茶單價
-    var peachOolongPrice = 70; // 蜜桃烏龍茶單價
-    var mintLemonPrice = 60; // 薄荷檸檬冰茶單價
-    var greenTeaQuantity = parseInt(document.getElementById('greenTea-quantity').value);
-    var peachOolongQuantity = parseInt(document.getElementById('peachOolong-quantity').value);
-    var mintLemonQuantity = parseInt(document.getElementById('mintLemon-quantity').value);
-    var subtotal = (greenTeaPrice * greenTeaQuantity) + (peachOolongPrice * peachOolongQuantity) + (mintLemonPrice * mintLemonQuantity);
-    var shippingFee = 60; // 運費
-    var total = subtotal + shippingFee;
+    let subtotal = 0;
+    for (const id in prices) {
+        const qty = parseInt(document.getElementById(id + '-quantity').value) || 0;
+        subtotal += prices[id] * qty;
+    }
+    const shippingFee = subtotal > 0 ? 60 : 0;  // 有買才收運費
+    const total = subtotal + shippingFee;
 
     document.getElementById('subtotal').innerText = '小計: NTD ' + subtotal;
     document.getElementById('shippingFee').innerText = '運費: NTD ' + shippingFee;

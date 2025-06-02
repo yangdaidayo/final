@@ -62,7 +62,7 @@
         <a href="index.jsp"><img class="logo" src="image/index/logo.png" width="150px" height="50px"></a>
         <p class="index"><a href="product_page.jsp">商品頁面</a></p>
         <p class="index"><a href="about_us.jsp">關於我們</a></p>    
-        <p class="cart"><a href="shopping.html">購物車</a></p>
+        <p class="cart"><a href="shopping.jsp">購物車</a></p>
     </header>
 
     <div class="container">

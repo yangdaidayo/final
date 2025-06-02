@@ -17,17 +17,21 @@
 <body>
     <header>
         <a href="index.jsp"><img class="logo" src="image/index/logo.png" width="150px" height="50px" name="top"></a>
-        <p class="search">搜尋欄</p>
-        <input type="text" name="search" size="15px" class="search">
+    
+        <form action="search.jsp" method="get" class="search">
+            <input type="text" name="keyword" size="15" placeholder="請輸入關鍵字">
+            <button type="submit">搜尋</button>
+        </form>
+    
         <p class="index"><a href="product_page.jsp" class="link">商品頁面</a></p>
         <p class="index"><a href="about_us.jsp" class="link">關於我們</a></p>
-        <% if (isLoggedIn) { %>
-            <p class="index"><a href="user.jsp" class="link"><%= userId %> 會員中心</a></p>
-            <p class="index"><a href="logout.jsp" class="link">登出</a></p>
+        <p cl        <% if (isLoggedIn) { %>
+        <p class="index"><a href="user.jsp" class="link"><%= userId %> 會員中心</a></p>
+        <p class="index"><a href="logout.jsp" class="link">登出</a></p>
         <% } else { %>
             <p class="index"><a href="login.html" class="link">登入/註冊</a></p> 
         <% } %>
-        <p class="cart"><a href="shopping.html" class="Link">購物車</a></p>
+        <p class="cart"><a href="shopping.jsp" class="Link">購物車</a></p>
     </header>
 
     <nav>
@@ -77,6 +81,8 @@
                     pstmt.close();
                     con.close();
                 }
+
+                
             } catch (ClassNotFoundException e) {
                 out.println("Class 錯誤：" + e.toString());
             } catch (SQLException e) {
@@ -85,6 +91,7 @@
         } else {
             out.println("<h2>歡迎回來！想再購買什麼呢?</h2>");
         }
+        
     %>
 
 

@@ -19,7 +19,7 @@
                 <p class="index"><a href="../../index.jsp" class="link">Home</a></p>
                 <p class="index"><a href="../../about_us.jsp" class="link">關於我們</a></p>
                 <p class="index"><a href="../../login.html" class="link">登入/註冊</a></p>
-                <p class="cart"><a href="../../shopping.html" class="Link">購物車</a></p>
+                <p class="cart"><a href="../../shopping.jsp" class="Link">購物車</a></p>
             </nav>
         </div>
         <div class="product-details">

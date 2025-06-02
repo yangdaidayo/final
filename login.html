@@ -17,12 +17,14 @@
 <body>
     <header>
         <a href="index.jsp"><img class="logo" src="image/index/logo.png" width="150" height="50" alt="茶道 Logo"></a>
-        <p class="search">搜尋欄</p>
-        <input type="text" name="search" size="15" class="search">
+         <form action="search.jsp" method="get" class="search" autocomplete="off">
+            <input type="text" name="keyword" size="15" placeholder="請輸入關鍵字" />
+            <button type="submit">搜尋</button>
+        </form>
         <p class="index"><a href="product_page.jsp" class="link">商品頁面</a></p>
         <p class="index"><a href="about_us.jsp" class="link">關於我們</a></p> 
         <p class="index"><a href="login.html" class="link">登入/註冊</a></p> 
-        <p class="cart"><a href="shopping.html" class="Link">購物車</a></p>
+        <p class="cart"><a href="shopping.jsp" class="Link">購物車</a></p>
     </header>
 
     <main>
