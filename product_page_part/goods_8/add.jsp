@@ -32,7 +32,7 @@ try {
 
            con.close();
 
-           response.sendRedirect("drink 8.jsp?page=1"); 
+           response.sendRedirect("drink_8.jsp?page=1"); 
        }
     }
     catch (SQLException sExec) {

@@ -32,7 +32,7 @@ try {
 
            con.close();
 
-           response.sendRedirect("drink 3.jsp?page=1"); //此處修改
+           response.sendRedirect("drink_3.jsp?page=1"); //此處修改
        }
     }
     catch (SQLException sExec) {
