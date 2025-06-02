@@ -29,7 +29,7 @@
                 <p>NT$30</p>
                 <p class="spe">柚香綠茶是一款專為清新自然愛好者設計的飲品。每一杯柚香綠茶都仿佛是自然的禮物，讓你在忙碌的都市生活中，找到一個安靜的角落，享受大自然的美好</p>
             </div>
-            <a href="../../Product page.html"><button class="back-button">返回商品頁面</button></a>
+            <a href="../../product_page.jsp"><button class="back-button">返回商品頁面</button></a>
             
             <div class="quantity-selector">
                 <h4>購買數量：</h4>

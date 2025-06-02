@@ -29,7 +29,7 @@
                 <p>NT$65</p>
                 <p class="spe">覆盆子的酸甜與檸檬的清新交織在一起，每一口都充滿了大自然狂歡的味道，帶你體驗一場清涼透心的夏日探險吧</p>
             </div>
-            <a href="../../Product page.html"><button class="back-button">返回商品頁面</button></a>
+            <a href="../../product_page.jsp"><button class="back-button">返回商品頁面</button></a>
             
             <div class="quantity-selector">
                 <h4>購買數量：</h4>

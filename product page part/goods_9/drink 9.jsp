@@ -31,7 +31,7 @@
                     “We shall meet in the place where there is no darkness.”
                     </p>
             </div>
-            <a href="../../Product page.html"><button class="back-button">返回商品頁面</button></a>
+            <a href="../../product_page.jsp"><button class="back-button">返回商品頁面</button></a>
             
             <div class="quantity-selector">
                 <h4>購買數量：</h4>

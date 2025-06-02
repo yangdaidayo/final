@@ -29,7 +29,7 @@
                 <p>NT$55</p>
                 <p class="spe">楊桃、奇異果與芭樂的完美碰撞，結合茶香與水果的天然甜味，創造出一款既健康又充滿活力的飲品。這種獨特的混合帶來了多層次的口感和豐富的營養，令人一喝便愛不釋口</p>
             </div>
-            <a href="../../Product page.html"><button class="back-button">返回商品頁面</button></a>
+            <a href="../../product_page.jsp"><button class="back-button">返回商品頁面</button></a>
             
             <div class="quantity-selector">
                 <h4>購買數量：</h4>

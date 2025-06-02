@@ -29,7 +29,7 @@
                 <p>NT$40</p>
                 <p class="spe">選用斯里蘭卡錫蘭紅茶茶葉，其色澤為清澈明亮的琥珀色，帶有一種清香與淡淡的煙燻味，滑順清爽的口感中略帶一些微微的酸味，其獨特的氣味十分受歡迎</p>
             </div>
-            <a href="../../Product page.html"><button class="back-button">返回商品頁面</button></a>
+            <a href="../../product_page.jsp"><button class="back-button">返回商品頁面</button></a>
             
             <div class="quantity-selector">
                 <h4>購買數量：</h4>

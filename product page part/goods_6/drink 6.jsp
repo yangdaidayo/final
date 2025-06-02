@@ -28,7 +28,7 @@
                 <p>NT$45</p>
                 <p class="spe">薄荷檸檬冰茶是夏日最清涼的救星。每一杯薄荷檸檬冰茶都像是一段夏日的冒險旅程，帶你從炎熱的都市穿越到清涼的綠洲，享受那片刻的清新和愉悅</p>
             </div>
-            <a href="../../Product page.html"><button class="back-button">返回商品頁面</button></a>
+            <a href="../../product_page.jsp"><button class="back-button">返回商品頁面</button></a>
             
             <div class="quantity-selector">
                 <h4>購買數量：</h4>

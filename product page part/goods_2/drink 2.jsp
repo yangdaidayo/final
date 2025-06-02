@@ -29,7 +29,7 @@
                 <p>NT$50</p>
                 <p class="spe">融合了新鮮柳橙的清爽酸甜與奶昔的絲滑香濃，將兩種截然不同的風味巧妙地結合在一起，充滿活力和動感的氛圍，為你帶來一種前所未有的口感享受</p>
             </div>
-            <a href="../../Product page.html"><button class="back-button">返回商品頁面</button></a>
+            <a href="../../product_page.jsp"><button class="back-button">返回商品頁面</button></a>
             
             <div class="quantity-selector">
                 <h4>購買數量：</h4>
