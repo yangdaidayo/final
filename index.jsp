@@ -32,9 +32,9 @@
 
     <nav>
         <div class="image-container">
-            <a href="product page part/goods_9/drink 9.jsp"><img src="image/index/introduction_1.png" class="control"></a>
-            <a href="product page part/goods_2/drink 2.jsp"><img src="image/index/introduction_2.png" class="control"></a>
-            <a href="product page part/goods_4/drink 4.jsp"><img src="image/index/introduction_3.png" class="control"></a>
+            <a href="product_page_part/goods_9/drink_9.jsp"><img src="image/index/introduction_1.png" class="control"></a>
+            <a href="product_page_part/goods_2/drink_2.jsp"><img src="image/index/introduction_2.png" class="control"></a>
+            <a href="product_page_part/goods_4/drink_4.jsp"><img src="image/index/introduction_3.png" class="control"></a>
         </div>
         <script src="JS/index_script.js"></script>
     </nav>
@@ -91,7 +91,7 @@
     <main>
         <h3>限時特賣</h3>
         <div class="item">
-            <a href="product page part/goods_1/drink 1.jsp">
+            <a href="product_page_part/goods_1/drink_1.jsp">
                 <img src="image/index/goods_1.png" class="goods">
                 <div class="text">
                     <h4>楊奇樂無比水果茶</h4>
@@ -104,7 +104,7 @@
             </a>
         </div>    
         <div class="item">
-            <a href="product page part/goods_2/drink 2.jsp">
+            <a href="product_page_part/goods_2/drink_2.jsp">
                 <img src="image/index/goods_2.png" class="goods">
                 <div class="text">
                     <h4>橙風破浪</h4>
@@ -117,7 +117,7 @@
             </a>
         </div>
         <div class="item">
-            <a href="product page part/goods_3/drink 3.jsp">
+            <a href="product_page_part/goods_3/drink_3.jsp">
                 <img src="image/index/goods_3.png" class="goods">
                 <div class="text">
                     <h4>莓果沁檸</h4>
@@ -130,7 +130,7 @@
 
         <h3>熱門商品</h3>
         <div class="item">
-            <a href="product page part/goods_7/drink 7.jsp">
+            <a href="product_page_part/goods_7/drink_7.jsp">
                 <img src="image/index/goods_4.png" class="goods">
                 <div class="text">
                     <h4>琥珀之輝</h4>
@@ -143,7 +143,7 @@
             </a>
         </div>
         <div class="item">            
-            <a href="product page part/goods_8/drink 8.jsp">
+            <a href="product_page_part/goods_8/drink_8.jsp">
                 <img src="image/index/goods_5.png" class="goods">
                 <div class="text">
                     <h4>午後時光</h4>
@@ -155,7 +155,7 @@
             </a>
         </div>
         <div class="item">
-            <a href="product page part/goods_9/drink 9.jsp">
+            <a href="product_page_part/goods_9/drink_9.jsp">
                 <img src="image/index/goods_6.png" class="goods">
                 <div class="text">
                     <h4>1984</h4>

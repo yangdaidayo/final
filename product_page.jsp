@@ -44,7 +44,7 @@
             </div>
             <div class="products">
                 <div class="product-card">
-                    <a href="product page part/goods_1/drink 1.jsp"><img src="image/product image/drink 1.png" alt="楊奇樂無比水果茶"></a>
+                    <a href="product_page_part/goods_1/drink_1.jsp"><img src="image/product_image/drink_1.png" alt="楊奇樂無比水果茶"></a>
                     <div class="product-info">
                         <h3>楊奇樂無比水果茶</h3>
                         <p>NT$55</p>
@@ -52,7 +52,7 @@
                     </div>
                 </div>
                 <div class="product-card">
-                    <a href="product page part/goods_2/drink 2.jsp"><img src="image/product image/drink 2.png" alt="橙風破浪"></a>
+                    <a href="product_page_part/goods_2/drink_2.jsp"><img src="image/product_image/drink_2.png" alt="橙風破浪"></a>
                     <div class="product-info">
                         <h3>橙風破浪</h3>
                         <p>NT$50</p>
@@ -60,7 +60,7 @@
                     </div>
                 </div>
                 <div class="product-card">
-                    <a href="product page part/goods_3/drink 3.jsp"><img src="image/product image/drink 3.png" alt="覆果好檸"></a>
+                    <a href="product_page_part/goods_3/drink_3.jsp"><img src="image/product_image/drink_3.png" alt="覆果好檸"></a>
                     <div class="product-info">
                         <h3>覆果好檸</h3>
                         <p>NT$65</p>
@@ -78,7 +78,7 @@
             </div>
             <div class="products">
                 <div class="product-card">
-                    <a href="product page part/goods_4/drink 4.jsp"><img src="image/product image/drink 4.png" alt="柚香綠茶"></a>
+                    <a href="product_page_part/goods_4/drink_4.jsp"><img src="image/product_image/drink_4.png" alt="柚香綠茶"></a>
                     <div class="product-info">
                         <h3>柚香綠茶</h3>
                         <p>NT$30</p>
@@ -86,7 +86,7 @@
                     </div>
                 </div>
                 <div class="product-card">
-                    <a href="product page part/goods_5/drink 5.jsp"><img src="image/product image/drink 5.png" alt="蜜桃烏龍茶"></a>
+                    <a href="product_page_part/goods_5/drink_5.jsp"><img src="image/product_image/drink_5.png" alt="蜜桃烏龍茶"></a>
                     <div class="product-info">
                         <h3>蜜桃烏龍茶</h3>
                         <p>NT$35</p>
@@ -94,7 +94,7 @@
                     </div>
                 </div>
                 <div class="product-card">
-                    <a href="product page part/goods_6/drink 6.jsp"><img src="image/product image/drink 6.png" alt="薄荷檸檬冰茶"></a>
+                    <a href="product_page_part/goods_6/drink_6.jsp"><img src="image/product_image/drink_6.png" alt="薄荷檸檬冰茶"></a>
                     <div class="product-info">
                         <h3>薄荷檸檬冰茶</h3>
                         <p>NT$45</p>
@@ -112,7 +112,7 @@
             </div>
             <div class="products">
                 <div class="product-card">
-                    <a href="product page part/goods_7/drink 7.jsp"><img src="image/product image/drink 7.png" alt="琥珀之輝"></a>
+                    <a href="product_page_part/goods_7/drink_7.jsp"><img src="image/product_image/drink_7.png" alt="琥珀之輝"></a>
                     <div class="product-info">
                         <h3>琥珀之輝</h3>
                         <p>$NT$40</p>
@@ -120,7 +120,7 @@
                     </div>
                 </div>
                 <div class="product-card">
-                    <a href="product page part/goods_8/drink 8.jsp"><img src="image/product image/drink 8.png" alt="午後時光"></a>
+                    <a href="product_page_part/goods_8/drink_8.jsp"><img src="image/product_image/drink_8.png" alt="午後時光"></a>
                     <div class="product-info">
                         <h3>午後時光</h3>
                         <p>NT$45</p>
@@ -128,7 +128,7 @@
                     </div>
                 </div>
                 <div class="product-card">
-                    <a href="product page part/goods_9/drink 9.jsp"><img src="image/product image/drink 9.png" alt="1984"></a>
+                    <a href="product_page_part/goods_9/drink_9.jsp"><img src="image/product_image/drink_9.png" alt="1984"></a>
                     <div class="product-info">
                         <h3>1984</h3>
                         <p>NT$55</p>

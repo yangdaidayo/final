@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>午後時光</title>
+    <title>琥珀之輝</title>
     <link rel="stylesheet" href="../../CSS/each_goods.css">
 </head>
 <body>
@@ -23,11 +23,11 @@
             </nav>
         </div>
         <div class="product-details">
-            <img src="../../image/product image/drink 8.png" alt="午後時光">
+            <img src="../../image/product_image/drink_7.png" alt="琥珀之輝">
             <div class="product-info">
-                <h2>午後時光</h2>
-                <p>NT$45</p>
-                <p class="spe">一個寧靜的午後，何不坐下來，手裡拿著一杯由新鮮牛奶與錫蘭紅茶沖泡而成的鮮奶茶，與三五好友一起，享受這悠閒的午後時光呢?</p>
+                <h2>琥珀之輝</h2>
+                <p>NT$40</p>
+                <p class="spe">選用斯里蘭卡錫蘭紅茶茶葉，其色澤為清澈明亮的琥珀色，帶有一種清香與淡淡的煙燻味，滑順清爽的口感中略帶一些微微的酸味，其獨特的氣味十分受歡迎</p>
             </div>
             <a href="../../product_page.jsp"><button class="back-button">返回商品頁面</button></a>
             
@@ -65,7 +65,7 @@
             <div id="reviews-list">
                 <h3>現有評論：</h3>
                 <%
-                    sql="SELECT COUNT(*) FROM `goods_8`";
+                    sql="SELECT COUNT(*) FROM `goods_7`";
                     ResultSet rs=con.createStatement().executeQuery(sql);
 
                     rs.next();
@@ -82,7 +82,7 @@
 
                     int start_record=(current_page-1)*5;
 
-                    sql="SELECT * FROM `goods_8` ORDER BY `GBNO` DESC LIMIT ";
+                    sql="SELECT * FROM `goods_7` ORDER BY `GBNO` DESC LIMIT ";
                     sql+=start_record+",5";
 
                     rs=con.createStatement().executeQuery(sql);
@@ -98,7 +98,7 @@
                     int page_num=(int)Math.ceil((double)total_content/5.0);
                     out.println("請選擇頁數");
                     for(int i=1;i<=page_num;i++)
-                        out.print("<a href='drink 8.jsp?page="+i+"'>"+i+"</a>&nbsp;");
+                        out.print("<a href='drink_7.jsp?page="+i+"'>"+i+"</a>&nbsp;");
                     out.println("<p>");
                     con.close();
                 }

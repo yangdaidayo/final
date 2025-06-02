@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>橙風破浪</title>
+    <title>午後時光</title>
     <link rel="stylesheet" href="../../CSS/each_goods.css">
 </head>
 <body>
@@ -23,11 +23,11 @@
             </nav>
         </div>
         <div class="product-details">
-            <img src="../../image/product image/drink 2.png" alt="橙風破浪">
+            <img src="../../image/product_image/drink_8.png" alt="午後時光">
             <div class="product-info">
-                <h2>橙風破浪</h2>
-                <p>NT$50</p>
-                <p class="spe">融合了新鮮柳橙的清爽酸甜與奶昔的絲滑香濃，將兩種截然不同的風味巧妙地結合在一起，充滿活力和動感的氛圍，為你帶來一種前所未有的口感享受</p>
+                <h2>午後時光</h2>
+                <p>NT$45</p>
+                <p class="spe">一個寧靜的午後，何不坐下來，手裡拿著一杯由新鮮牛奶與錫蘭紅茶沖泡而成的鮮奶茶，與三五好友一起，享受這悠閒的午後時光呢?</p>
             </div>
             <a href="../../product_page.jsp"><button class="back-button">返回商品頁面</button></a>
             
@@ -53,7 +53,7 @@
                     sql="USE `board`";
                     con.createStatement().execute(sql);
             %>
-            <form name="form2" method="get" action="add.jsp">
+            <form name="form3" method="get" action="add.jsp">
                 <label for="rating">評分（1~5分）：</label><br>
                 <input type="number" id="rating" name="rating" min="1" max="5" required>
                 <br>
@@ -65,7 +65,7 @@
             <div id="reviews-list">
                 <h3>現有評論：</h3>
                 <%
-                    sql="SELECT COUNT(*) FROM `goods_2`";
+                    sql="SELECT COUNT(*) FROM `goods_8`";
                     ResultSet rs=con.createStatement().executeQuery(sql);
 
                     rs.next();
@@ -82,7 +82,7 @@
 
                     int start_record=(current_page-1)*5;
 
-                    sql="SELECT * FROM `goods_2` ORDER BY `GBNO` DESC LIMIT ";
+                    sql="SELECT * FROM `goods_8` ORDER BY `GBNO` DESC LIMIT ";
                     sql+=start_record+",5";
 
                     rs=con.createStatement().executeQuery(sql);
@@ -98,7 +98,7 @@
                     int page_num=(int)Math.ceil((double)total_content/5.0);
                     out.println("請選擇頁數");
                     for(int i=1;i<=page_num;i++)
-                        out.print("<a href='drink 2.jsp?page="+i+"'>"+i+"</a>&nbsp;");
+                        out.print("<a href='drink_8.jsp?page="+i+"'>"+i+"</a>&nbsp;");
                     out.println("<p>");
                     con.close();
                 }

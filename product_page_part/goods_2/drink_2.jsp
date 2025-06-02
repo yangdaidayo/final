@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1984</title>
+    <title>橙風破浪</title>
     <link rel="stylesheet" href="../../CSS/each_goods.css">
 </head>
 <body>
@@ -23,13 +23,11 @@
             </nav>
         </div>
         <div class="product-details">
-            <img src="../../image/product image/drink 9.png" alt="1984">
+            <img src="../../image/product_image/drink_2.png" alt="橙風破浪">
             <div class="product-info">
-                <h2>1984</h2>
-                <p>NT$55</p>
-                <p class="spe">靈感源於英國作家喬治·歐威爾筆下的反烏托邦小說——1984。咖啡豆採用羅布斯塔咖啡豆，其口感較為苦澀，其顏色與口感反映了書中黑暗且充滿苦難的環境，且咖啡裡加入了些許書中主角常喝的琴酒，增添了些許不同的風味<br>
-                    “We shall meet in the place where there is no darkness.”
-                    </p>
+                <h2>橙風破浪</h2>
+                <p>NT$50</p>
+                <p class="spe">融合了新鮮柳橙的清爽酸甜與奶昔的絲滑香濃，將兩種截然不同的風味巧妙地結合在一起，充滿活力和動感的氛圍，為你帶來一種前所未有的口感享受</p>
             </div>
             <a href="../../product_page.jsp"><button class="back-button">返回商品頁面</button></a>
             
@@ -55,7 +53,7 @@
                     sql="USE `board`";
                     con.createStatement().execute(sql);
             %>
-            <form name="form3" method="get" action="add.jsp">
+            <form name="form2" method="get" action="add.jsp">
                 <label for="rating">評分（1~5分）：</label><br>
                 <input type="number" id="rating" name="rating" min="1" max="5" required>
                 <br>
@@ -67,7 +65,7 @@
             <div id="reviews-list">
                 <h3>現有評論：</h3>
                 <%
-                    sql="SELECT COUNT(*) FROM `goods_9`";
+                    sql="SELECT COUNT(*) FROM `goods_2`";
                     ResultSet rs=con.createStatement().executeQuery(sql);
 
                     rs.next();
@@ -84,7 +82,7 @@
 
                     int start_record=(current_page-1)*5;
 
-                    sql="SELECT * FROM `goods_9` ORDER BY `GBNO` DESC LIMIT ";
+                    sql="SELECT * FROM `goods_2` ORDER BY `GBNO` DESC LIMIT ";
                     sql+=start_record+",5";
 
                     rs=con.createStatement().executeQuery(sql);
@@ -100,7 +98,7 @@
                     int page_num=(int)Math.ceil((double)total_content/5.0);
                     out.println("請選擇頁數");
                     for(int i=1;i<=page_num;i++)
-                        out.print("<a href='drink 9.jsp?page="+i+"'>"+i+"</a>&nbsp;");
+                        out.print("<a href='drink_2.jsp?page="+i+"'>"+i+"</a>&nbsp;");
                     out.println("<p>");
                     con.close();
                 }
