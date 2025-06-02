@@ -17,8 +17,8 @@
         <a href="index.jsp"><img class="logo" src="image/index/logo.png" width="150" height="50" alt="茶道 Logo"></a>
         <p class="search">搜尋欄</p>
         <input type="text" name="search" size="15" class="search">
-        <p class="index"><a href="index.jsp" class="link">Home</a></p>
         <p class="index"><a href="product_page.jsp" class="link">商品頁面</a></p>
+        <p class="index"><a href="about_us.jsp" class="link">關於我們</a></p>
         <% if (isLoggedIn) { %>
             <p class="index"><a href="user.jsp" class="link"><%= userId %> 會員中心</a></p>
             <p class="index"><a href="logout.jsp" class="link">登出</a></p>
