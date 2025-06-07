@@ -85,7 +85,7 @@
                 <p id="subtotal">小計: NTD 0</p>
                 <p id="shippingFee">運費: NTD 60</p>
                 <p id="total">總計: NTD 0</p>
-                <button type="button" onclick="location.href='index.html'">繼續購買</button>
+                <button type="button" onclick="location.href='index.jsp'">繼續購買</button>
                 <input type="submit" value="確認訂單" />
             </div>
         </form>

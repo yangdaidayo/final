@@ -1,36 +1,41 @@
-<%@ page import = "java.sql.*, java.util.*"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" session="true" %>
-<%@ page pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*, java.util.*" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" session="true" %>
 <%
     String userId = (String) session.getAttribute("userId");
     Boolean isLoggedIn = (Boolean) session.getAttribute("login");
+    Boolean isAdmin = (Boolean) session.getAttribute("isAdmin");
     if (isLoggedIn == null) isLoggedIn = false;
+    if (isAdmin == null) isAdmin = false;
 %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>茶道</title>
     <link rel="stylesheet" href="CSS/index_style.css">
 </head>
 <body>
     <header>
         <a href="index.jsp"><img class="logo" src="image/index/logo.png" width="150px" height="50px" name="top"></a>
-    
+        
         <form action="search.jsp" method="get" class="search">
             <input type="text" name="keyword" size="15" placeholder="請輸入關鍵字">
             <button type="submit">搜尋</button>
         </form>
-    
+
         <p class="index"><a href="product_page.jsp" class="link">商品頁面</a></p>
         <p class="index"><a href="about_us.jsp" class="link">關於我們</a></p>
-        <p cl        <% if (isLoggedIn) { %>
-        <p class="index"><a href="user.jsp" class="link"><%= userId %> 會員中心</a></p>
-        <p class="index"><a href="logout.jsp" class="link">登出</a></p>
+
+        <% if (isLoggedIn) { %>
+            <p class="index"><a href="user.jsp" class="link"><%= userId %> 會員中心</a></p>
+            <p class="index"><a href="logout.jsp" class="link">登出</a></p>
+            <% if (isAdmin) { %>
+                <p class="index"><a href="admin.jsp" class="link">管理者模式</a></p>            
+            <% } %>
         <% } else { %>
             <p class="index"><a href="login.html" class="link">登入/註冊</a></p> 
         <% } %>
+
         <p class="cart"><a href="shopping.jsp" class="Link">購物車</a></p>
     </header>
 
@@ -42,7 +47,6 @@
         </div>
         <script src="JS/index_script.js"></script>
     </nav>
-
     <%
         // 檢查 Session 中是否已有標記，避免重整頁面時再次計數
         if (session.getAttribute("counted") == null) {

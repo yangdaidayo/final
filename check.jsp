@@ -5,6 +5,7 @@
     String id = request.getParameter("id");
     String pwd = request.getParameter("pwd");
 
+    // 驗證輸入
     if (id == null || pwd == null || id.trim().isEmpty() || pwd.trim().isEmpty()) {
 %>
     <script>
@@ -15,7 +16,7 @@
         return;
     }
 
-    // 密碼加密 SHA-256
+    // 密碼 SHA-256 加密
     MessageDigest md = MessageDigest.getInstance("SHA-256");
     byte[] hash = md.digest(pwd.getBytes("UTF-8"));
     StringBuilder hexString = new StringBuilder();
@@ -26,33 +27,42 @@
     }
     String hashedPwd = hexString.toString();
 
-    // 連接資料庫
+    // 資料庫連線設定
     String url = "jdbc:mysql://localhost:3306/members?useSSL=false&serverTimezone=Asia/Taipei";
-    String user = "root";
-    String password = "1234";
+    String dbUser = "root";
+    String dbPwd = "1234";
 
     Class.forName("com.mysql.cj.jdbc.Driver");
-    Connection conn = DriverManager.getConnection(url, user, password);
+    Connection conn = DriverManager.getConnection(url, dbUser, dbPwd);
 
+    // 查詢帳密
     String sql = "SELECT * FROM users WHERE id = ? AND pwd = ?";
     PreparedStatement stmt = conn.prepareStatement(sql);
     stmt.setString(1, id);
     stmt.setString(2, hashedPwd);
-
     ResultSet rs = stmt.executeQuery();
 
     if (rs.next()) {
         session.setAttribute("login", true);
         session.setAttribute("userId", id);
 
-        // 如果尚未有購物車，則初始化
+        if ("test".equalsIgnoreCase(id)) {
+            session.setAttribute("isAdmin", true);
+        } else {
+            session.setAttribute("isAdmin", false);
+        }
+
         if (session.getAttribute("cart") == null) {
             session.setAttribute("cart", new java.util.ArrayList<String>());
         }
 %>
     <script>
-        alert("登入成功，歡迎 <%= id %>！");
-        window.location.href = "user.jsp";
+        <% if ("test".equalsIgnoreCase(id)) { %>
+            alert("登入成功，歡迎 <%= id %>！（管理者模式）");
+        <% } else { %>
+            alert("登入成功，歡迎 <%= id %>！");
+        <% } %>
+        window.location.href = "index.jsp";
     </script>
 <%
     } else {
@@ -68,6 +78,4 @@
     stmt.close();
     conn.close();
 %>
-
-
 
